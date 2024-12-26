@@ -98,7 +98,7 @@ section.hero_section {
     align-items: center;
     text-align: center;
     font-size: 28px;
-    color: var(--color2--);
+    color:white;   
     font-family: var(--font_family3--);
 }
 
@@ -128,7 +128,7 @@ section.hero_section {
     flex-direction: column;
     top: 85vh;
     left: 2vh;
-    color: var(--color2--);
+    color: white;
     font-family: var(--font_family1--);
 
 }
@@ -151,6 +151,11 @@ section.hero_section {
     background-color: white;
     border-radius: 8px;
     padding: 6px 8px;
+    transition: .5s;
+}
+
+.hero_section .sosmed .sosmed_icon .bx:hover{
+    transform: scale(1.1);
 }
 
 /* hero end */
