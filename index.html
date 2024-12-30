@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="logo">
             <a href="">
                 <h1>Pengli<span>puran</span></h1>
@@ -33,23 +33,68 @@
         <div class="navbar">
             <ul>
                 <li>
-                    <a href="#home">Beranda</a>
+                    <a href="#">Beranda</a>
                 </li>
                 <li>
                     <a href="#about">Tentang</a>
                 </li>
                 <li>
-                    <a href="#Location">Lokasi</a>
+                    <a href="#content">Konten</a>
                 </li>
                 <li>
-                    <a href="#Content">Konten</a>
+                    <a href="#location">Lokasi</a>
+                </li>
+                <li>
+                    <a href="#gallery">Gallery</a>
                 </li>
             </ul>
         </div>
 
+        <div class="nav_hamburger">
+            <div class="user">
+                <i class='bx bx-user'></i>
+                <div class="detail_user">
+                    <h3>USER</h3>
+                    <p>Traveler</p>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#"><i class='bx bx-home'></i>Home</a>
+                </li>
+                <li>
+                    <a href="#about"><i class='bx bx-file'></i>Tentang</a>
+                </li>
+                <li>
+                    <a href="#content"> <i class='bx bx-camera'></i>Konten</a>
+                </li>
+                <li>
+                    <a href="#location"> <i class='bx bx-current-location'></i>Lokasi</a>
+                </li>
+                <li>
+                    <a href="#gallery"> <i class='bx bx-images'></i>Gallery  </a>
+                </li>
+            </ul>
+
+            <div class="close">
+                <i class='bx bx-x'></i>
+            </div>
+
+
+        </div>
+
+        <div class="hamburger">
+            <i class='bx bx-menu'></i>
+        </div>
+
         <div class="kanan">
-            <input type="text">
-            <i class='bx bx-search'></i>
+            <div class="user">
+                <i class='bx bx-user'></i>
+                <p>USER</p>
+            </div>
+            <div class="cart">
+                <i class='bx bxs-cart-alt'></i>
+            </div>
         </div>
     </nav>
 
@@ -74,7 +119,7 @@
     </section>
 
 
-    <section class="about_section">
+    <section id="about" class="about_section">
         <div class="about_title">
             <h1>Tentang Desa Penglipuran</h1>
             <p>Permata Tersembunyi di Pulau Dewata</p>
@@ -106,7 +151,7 @@
         </div>
     </section>
 
-    <section class="content">
+    <section id="content" class="content">
         <div class="content_title">
             <h1>Highlight Desa Penglipuran</h1>
             <p>Apa aja sih yang ada di Desa Penglipuran</p>
@@ -180,7 +225,7 @@
             <div class="card content1">
                 <img src="assets/5.jpeg" alt="">
                 <div class="text_content">
-                    <h3> 5.  Sajian Kuliner Unik</h3>
+                    <h3> 5. Sajian Kuliner Unik</h3>
                     <p>
                         Pesona lain yang ditawarkan oleh Desa Penglipuran adalah sebuah festival budaya yang disebut
                         Penglipuran Village Festival. Acara ini biasanya diselenggarakan di akhir tahun dengan rangkaian
@@ -208,7 +253,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section id="location" class="contact">
         <div class="contact_title">
             <h1>Informasi Desa Penglipuran</h1>
             <p>Yuk cari tahu lebih lanjut</p>
@@ -224,7 +269,6 @@
                         <p>Jl. Penglipuran, Kubu, Kec. Bangli, Kabupaten Bangli, Bali 80611</p>
                     </div>
                 </div>
-
                 <div class="telepon">
                     <i class='bx bxs-phone'></i>
                     <div class="detail_info">
@@ -232,7 +276,6 @@
                         <p>Telp: 082144543439</p>
                     </div>
                 </div>
-
                 <div class="tiket">
                     <i class='bx bx-money'></i>
                     <div class="detail_info">
@@ -245,12 +288,9 @@
                     </div>
                     </p>
                 </div>
-
                 <a href="">
                     <button>Contact Us</button>
                 </a>
-
-
                 <div class="jadwal">
                     <p class="jadwal_p">
                         Jadwal Buka:
@@ -271,8 +311,8 @@
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.787705366797!2d115.35717817517987!3d-8.422498585045787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2196eace4f4a9%3A0x3319169adf0c3419!2sDesa%20Wisata%20Penglipuran!5e0!3m2!1sid!2sid!4v1734256432568!5m2!1sid!2sid"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="map"></iframe>
             </div>
 
         </div>
@@ -288,66 +328,111 @@
             <p>Gimana tertatik kan? Yuk pesan tiketnya sekarang</p>
         </div>
 
-        <div class="payment_method">
-            <div class="mandiri">
-                <div class="mandiri_img">
-                    <button>
-                        <img src="assets/Bank_Mandiri_logo_2016.svg.png" alt="Mandiri">
-                    </button>
+        <div class="payment_column">
+            <div class="payment_method">
+                <div class="mandiri">
+                    <div class="mandiri_img">
+                        <button>
+                            <img src="assets/Bank_Mandiri_logo_2016.svg.png" alt="Mandiri">
+                        </button>
+                    </div>
+                </div>
+                <div class="bni">
+                    <div class="bni_img">
+                        <button>
+                            <img src="assets/BNI_logo.svg.png" alt="BNI">
+                        </button>
+                    </div>
+                </div>
+                <div class="bca">
+                    <div class="bca_img">
+                        <button>
+                            <img src="assets/logo bca.png" alt="BCA">
+                        </button>
+                    </div>
+                </div>
+                <div class="gopay">
+                    <div class="gopay_img">
+                        <button>
+                            <img src="assets/Gopay_logo.svg.png" alt="Gopay">
+                        </button>
+                    </div>
+                </div>
+                <div class="dana">
+                    <div class="dana_img">
+                        <button>
+                            <img src="assets/Logo_dana_blue.svg.png" alt="Dana">
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="bni">
-                <div class="bni_img">
-                    <button>
-                        <img src="assets/BNI_logo.svg.png" alt="BNI">
-                    </button>
+
+
+
+            <div class="pop_message1">
+                <div class="pop_up1">
+                    <img src="assets/check.png" alt="">
+                    <h3>Thank You!</h3>
+                    <p>Your payment has been successful!</p>
+                    <button>Continue</button>
                 </div>
             </div>
-            <div class="bca">
-                <div class="bca_img">
-                    <button>
-                        <img src="assets/logo bca.png" alt="BCA">
-                    </button>
+
+
+            <div class="detail_payment">
+
+                <input type="text" placeholder="Nama Lengkap">
+                <input type="text" placeholder="Tanggal Pesanan">
+                <input type="text" placeholder="No Telp">
+                <input type="text" placeholder="Email">
+
+                <div class="tipe_tiket">
+                    <div class="domestik">
+                        <button>Domestik</button>
+                    </div>
+                    <div class="internasional">
+                        <button>Internasional</button>
+                    </div>
                 </div>
-            </div>
-            <div class="gopay">
-                <div class="gopay_img">
-                    <button>
-                        <img src="assets/Gopay_logo.svg.png" alt="Gopay">
-                    </button>
-                </div>
-            </div>
-            <div class="dana">
-                <div class="dana_img">
-                    <button>
-                        <img src="assets/Logo_dana_blue.svg.png" alt="Dana">
-                    </button>
+                <div class="payment_button">
+                    <button>Beli Sekarang</button>
                 </div>
             </div>
 
         </div>
 
+    </section>
 
-        <div class="pop_message1">
-            <div class="pop_up1">
-                <img src="assets/check.png" alt="">
-                <h3>Thank You!</h3>
-                <p>Your payment has been successful!</p>
-                <button>Continue</button>
-            </div>
+    <section id="gallery" class="gallery">
+        <div class="gallery_title">
+            <h1>Our<span> Gallery</span></h1>
+            <p>"Pemandangan Desa Yang Memukau, Desa Terbersih di Dunia"</p>
         </div>
-
-
-        <div class="detail_payment">
-
-            <input type="text" placeholder="Nama Lengkap">
-            <input type="text" placeholder="Tanggal Pesanan">
-            <input type="text" placeholder="No Telp">
-            <input type="text" placeholder="Email">
-
-            <a href="">
-                <button>Beli Sekarang</button>
-            </a>
+        <div class="detail_gallery">
+            <div class="img_gallery">
+                <div class="gallery_kiri">
+                    <div class="kiri_atas">
+                        <img src="assets/galeri1.jpg" alt="">
+                    </div>
+                    <div class="kiri_bawah">
+                        <img src="assets/galeri2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="gallery_kanan">
+                    <div class="kanan_atas">
+                        <img src="assets/galeri3.jpg" alt="">
+                    </div>
+                    <div class="kanan_bawah">
+                        <div class="kanan_bawah1">
+                            <img src="assets/galeri4.jpg" alt="">
+                            <img src="assets/galeri5.jpg" alt="">
+                        </div>
+                        <div class="kanan_bawah2">
+                            <img src="assets/galeri6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -380,7 +465,8 @@
                 <h2>Charles</h2>
                 <div class="text_review">
                     <h3>Desanya Bersih!</h3>
-                    <p>Di tempatku tidak ada desa sebersih ini, seumur-umur aku baru pertama kali melihatnya. Menakjubkan😀!</p>
+                    <p>Di tempatku tidak ada desa sebersih ini, seumur-umur aku baru pertama kali melihatnya.
+                        Menakjubkan😀!</p>
                 </div>
                 <div class="star">
                     <span>4,8</span>
@@ -479,9 +565,9 @@
                 <div class="company">
                     <h1>Company</h1>
                     <a href="">About Us</a>
-                    <a href="">Services</a>
-                    <a href="">Community</a>
-                    <a href="">Testimonical</a>
+                    <a href="">Content</a>
+                    <a href="">Location</a>
+                    <a href="">Review</a>
                 </div>
 
                 <div class="support">
