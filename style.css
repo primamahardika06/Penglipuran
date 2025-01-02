@@ -174,7 +174,7 @@ section.hero_section {
     min-height: 100vh;
 }
 
-.hero_section::after{
+.hero_section::after {
     content: '';
     display: block;
     position: absolute;
@@ -183,7 +183,7 @@ section.hero_section {
     background: rgba(0, 0, 0, 0.226);
     border-bottom-right-radius: 32px;
     border-bottom-left-radius: 32px;
-    
+
 }
 
 .hero_section .text h1 {
@@ -250,7 +250,7 @@ section.hero_section {
 .hero_section .text button:hover::before {
     transform: scaleX(1);
     /* border-radius: 4px; */
-  }
+}
 
 .hero_section .sosmed_icon {
     display: flex;
@@ -337,6 +337,10 @@ section.hero_section {
     font-family: var(--font_family1--);
 }
 
+.about_title span {
+    color: #3d5e3b;
+}
+
 .about_title h1 {
     font-size: 32px;
 }
@@ -387,6 +391,10 @@ section.hero_section {
     justify-content: center;
     font-family: var(--font_family1--);
     margin-bottom: 32px;
+}
+
+.content_title span {
+    color: #3d5e3b;
 }
 
 .content_title h1 {
@@ -517,6 +525,11 @@ section.contact {
     display: flex;
     flex-direction: row;
 }
+
+.contact_title span {
+    color: #3d5e3b;
+}
+
 
 .contact_title {
     display: flex;
@@ -651,6 +664,10 @@ section.contact {
     font-family: var(--font_family1--);
 }
 
+.payment_title span {
+    color: #3d5e3b;
+}
+
 .payment_title h1 {
     font-size: 32px;
 }
@@ -757,14 +774,14 @@ section.contact {
     padding: 12px 32px;
     cursor: pointer;
     border: none;
-    background-color:transparent;
+    background-color: transparent;
     color: var(--color1--);
     font-weight: bold;
     border-radius: 8px;
     transition: .5s;
 }
 
-.tipe_tiket button:hover{
+.tipe_tiket button:hover {
     transform: scale(1.1);
 }
 
@@ -963,6 +980,10 @@ section.contact {
     padding: 0 12px;
 }
 
+.review_title span {
+    color: #3d5e3b;
+}
+
 .review_title p {
     color: #8EB69B;
 }
@@ -1062,7 +1083,7 @@ section.contact {
 
 
 .self_review span {
-    color: red;
+    color: #3d5e3b;
 }
 
 .your_review .nama {
@@ -1167,7 +1188,7 @@ footer a {
 }
 
 .title_footer h1 {
-    color:black;
+    color: black;
 }
 
 .title_footer span {
@@ -2280,14 +2301,14 @@ footer a {
         aspect-ratio: 1 / 1;
     }
 
-    .form_review h2{
+    .form_review h2 {
         font-size: 20px;
     }
 
     .text_review h3 {
         font-size: 14px;
     }
-    
+
     .text_review p {
         font-size: 12px;
     }
