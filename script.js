@@ -151,7 +151,7 @@ submitReviewButton.addEventListener('click', (event) => {
   if (validateReviewInputs()) {
     popMessageReview.style.display = 'flex'; // Tampilkan pop_message1
   } else {
-    alert('Harap untuk mengisi review terlebih dahului!');
+    alert('Harap untuk melengkapi form terlebih dahului!');
   }
 });
 

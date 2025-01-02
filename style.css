@@ -29,7 +29,7 @@ nav {
     z-index: 99999;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(245, 245, 245, 0.614);
+    /* background-color: rgba(245, 245, 245, 0.614); */
     padding: 20px 32px;
 }
 
@@ -42,8 +42,9 @@ nav {
 #navbar.sticky .navbar ul a {
     color: white;
 }
+
 #navbar.sticky .navbar ul a:hover {
-    color:var(--color4--);
+    color: var(--color4--);
 }
 
 #navbar.sticky .logo span {
@@ -59,18 +60,23 @@ nav a {
     font-family: var(--font_family1--);
 }
 
+nav .logo h1 {
+    font-size: 28px;
+}
+
 nav .logo span {
-    color: var(--color1--);
+    color: var(--color4--);
 }
 
 nav .logo a {
-    color: black;
+    color: white;
 }
 
 nav .navbar ul a {
     display: flex;
     align-items: center;
-    color: var(--color3--);
+    /* color: var(--color3--); */
+    color: white;
     transition: .5s;
     font-weight: bold;
 }
@@ -110,7 +116,6 @@ nav .kanan .user {
     color: var(--color1--);
     padding: 4px 12px;
     border-radius: 8px;
-    /* border: 1px solid #3d5e3b; */
     cursor: pointer;
     transition: .5s;
     font-size: 24px;
@@ -161,13 +166,31 @@ section.hero_section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(assets/homepage\ v2.png);
+    background-image: url(assets/homepage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     min-height: 100vh;
-    padding-top: 20vh;
+}
+
+.hero_section::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.226);
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    
+}
+
+.hero_section .text h1 {
+    font-family: var(--font_family2--);
+    font-size: 60px;
+    letter-spacing: 4px;
+    font-weight: 500;
 }
 
 
@@ -178,9 +201,10 @@ section.hero_section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
     color: white;
-    font-family: var(--font_family3--);
+    font-family: var(--font_family1--);
+    z-index: 999;
 }
 
 .hero_section .text a {
@@ -191,51 +215,67 @@ section.hero_section {
 .hero_section .text button {
     display: flex;
     justify-content: center;
-    padding: 8px 32px;
+    align-items: center;
+    padding: 8px 48px;
+    background-color: rgba(255, 255, 255, 0.381);
+    color: whitesmoke;
     border: none;
-    border-radius: 32px;
+    transition: .5s ease-in-out;
     cursor: pointer;
+    position: relative;
     font-weight: bold;
-    transition: .5s;
+    z-index: 999;
 }
 
 .hero_section .text button:hover {
     transform: scale(1.1);
 }
 
-.hero_section .sosmed {
+
+.hero_section .text button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1--);
+    color: white;
+    z-index: -1;
+    transition: 0.5s;
+    transform-origin: 0;
+    transform: scaleX(0);
+}
+
+.hero_section .text button:hover::before {
+    transform: scaleX(1);
+    /* border-radius: 4px; */
+  }
+
+.hero_section .sosmed_icon {
     display: flex;
     position: absolute;
-    flex-direction: column;
-    top: 85vh;
-    left: 2vh;
-    color: white;
-    font-family: var(--font_family1--);
-
-}
-
-.hero_section .sosmed p {
-    font-size: 20px;
-}
-
-.hero_section .sosmed .sosmed_icon {
-    display: flex;
     flex-direction: row;
+    top: 88vh;
+    left: 2vh;
     font-size: 20px;
     gap: 8px;
     cursor: pointer;
-
+    font-family: var(--font_family1--);
+    z-index: 999;
 }
 
-.hero_section .sosmed .sosmed_icon .bx {
+
+.hero_section .sosmed_icon .bx {
     color: var(--color3--);
-    background-color: white;
-    border-radius: 8px;
-    padding: 6px 8px;
+    background-color: rgba(255, 255, 255, 0.79);
+    color: var(--color1--);
+    border-radius: 50%;
+    padding: 8px 8px;
     transition: .5s;
 }
 
-.hero_section .sosmed .sosmed_icon .bx:hover {
+.hero_section .sosmed_icon .bx:hover {
     transform: scale(1.1);
 }
 
@@ -293,6 +333,7 @@ section.hero_section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     font-family: var(--font_family1--);
 }
 
@@ -716,20 +757,25 @@ section.contact {
     padding: 12px 32px;
     cursor: pointer;
     border: none;
-    background-color: var(--color4--);
-    color: black;
+    background-color:transparent;
+    color: var(--color1--);
     font-weight: bold;
     border-radius: 8px;
+    transition: .5s;
+}
+
+.tipe_tiket button:hover{
+    transform: scale(1.1);
 }
 
 .domestik button.active {
-    background-color: #3d5e3b;
-    color: white;
+    border: 1px solid #3d5e3b;
+    color: var(--color1--);
 }
 
 .internasional button.active {
-    background-color: #3d5e3b;
-    color: white;
+    border: 1px solid #3d5e3b;
+    color: var(--color1--);
 }
 
 .pop_message1 {
@@ -746,7 +792,7 @@ section.contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 10px 2px #dadedd;
     z-index: 2;
@@ -782,7 +828,7 @@ section.contact {
 
 /* gallery start */
 
-.gallery{
+.gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -790,7 +836,7 @@ section.contact {
     padding: 12px 32px;
 }
 
-.gallery_title{
+.gallery_title {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -798,95 +844,96 @@ section.contact {
     margin-top: 32px;
 }
 
-.gallery_title h1{
+.gallery_title h1 {
     font-size: 32px;
 }
-.gallery_title span{
+
+.gallery_title span {
     color: #3d5e3b;
 }
 
-.gallery_title p{
+.gallery_title p {
     font-size: 16px;
     color: var(--color4--);
 }
 
-.detail_gallery{
+.detail_gallery {
     display: flex;
     justify-content: center;
-     
+
 }
 
-.detail_gallery::-webkit-scrollbar{
+.img_gallery::-webkit-scrollbar {
     width: 0;
 }
 
-.img_gallery::-webkit-scrollbar{
-        width: 0;
-    }
-
-.img_gallery{
+.img_gallery {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    margin-top: 32px; 
+    margin-top: 32px;
     overflow-x: auto;
     justify-content: flex-start;
 }
 
-.gallery_kiri{
+.gallery_kiri {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.gallery_kanan{
+
+.gallery_kanan {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.gallery_kanan .kanan_bawah{
+
+.gallery_kanan .kanan_bawah {
     display: flex;
     flex-direction: row;
     gap: 8px;
 }
 
-.gallery_kanan .kanan_bawah1{
+.gallery_kanan .kanan_bawah1 {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.img_gallery img{
+.img_gallery img {
     transition: .5s;
 }
 
-.img_gallery img:hover{
-    transform: scale(0.9)
+.img_gallery img:hover {
+    transform: scale(0.9);
 }
 
 
-.gallery_kiri .kiri_atas img{
+.gallery_kiri .kiri_atas img {
     width: 300px;
     height: 418px;
     border-radius: 8px;
 }
 
-.gallery_kiri .kiri_bawah img{
+.gallery_kiri .kiri_bawah img {
     width: 300px;
     height: 210px;
     border-radius: 8px;
 }
 
-.gallery_kanan .kanan_atas img{
+.gallery_kanan .kanan_atas img {
     width: 600px;
     height: 220px;
     border-radius: 8px;
 }
-.gallery_kanan .kanan_bawah1 img{
+
+.gallery_kanan .kanan_bawah1 img {
     width: 300px;
     height: 200px;
     border-radius: 8px;
 }
-.gallery_kanan .kanan_bawah2 img{
+
+.gallery_kanan .kanan_bawah2 img {
     width: 300px;
     height: 410px;
     border-radius: 8px;
@@ -1058,7 +1105,7 @@ section.contact {
     align-items: center;
     align-self: center;
     justify-content: center;
-    
+
 }
 
 .pop_up2 {
@@ -1066,7 +1113,7 @@ section.contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 10px 2px #dadedd;
     z-index: 2;
@@ -1117,6 +1164,10 @@ footer a {
     display: flex;
     padding-top: 12px;
     gap: 8px;
+}
+
+.title_footer h1 {
+    color:black;
 }
 
 .title_footer span {
@@ -1201,7 +1252,7 @@ footer a {
     color: var(--color1--);
 }
 
-.contact_us2{
+.contact_us2 {
     display: none;
 }
 
@@ -1289,7 +1340,7 @@ footer a {
     transition: 0.5s;
     font-size: 20px;
     justify-content: flex-start;
-   
+
 }
 
 .nav_hamburger ul {
@@ -1368,7 +1419,7 @@ footer a {
 
 /* Responsive */
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .self_review .identitas_review {
         flex-direction: column;
     }
@@ -1377,6 +1428,7 @@ footer a {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 1030px) {
     nav .navbar {
         display: none;
@@ -1388,6 +1440,7 @@ footer a {
 
     .hamburger {
         display: block;
+        color: white;
     }
 
     .nav_hamburger {
@@ -1418,11 +1471,11 @@ footer a {
         font-size: 28px;
     }
 
-    .gallery_title h1{
+    .gallery_title h1 {
         font-size: 28px;
     }
-    
-    .gallery_title p{
+
+    .gallery_title p {
         font-size: 16px;
     }
 
@@ -1640,6 +1693,18 @@ footer a {
         letter-spacing: 2px;
     }
 
+    .text_contact2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .text_contact2 button {
+        width: 200px;
+    }
+
 
 }
 
@@ -1740,7 +1805,20 @@ footer a {
         font-size: 12px;
     }
 
+    .hero_section .text h1 {
+        font-size: 48px;
+    }
 
+
+    .hero_section .text {
+        display: flex;
+        font-size: 20px;
+    }
+
+    .hero_section .text button {
+        font-size: 12px;
+
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -1791,17 +1869,17 @@ footer a {
 @media screen and (max-width: 680px) {
 
     .about_section {
-       gap: 0vh;
+        gap: 0vh;
     }
 
     .about_img {
         display: flex;
         flex-direction: column-reverse;
-        gap: 12px;  
+        gap: 12px;
         align-items: center;
     }
 
-    .img_kanan{
+    .img_kanan {
         display: flex;
         flex-direction: row;
         gap: 12px;
@@ -1860,6 +1938,20 @@ footer a {
         color: white;
         transition: .5s;
         cursor: pointer;
+    }
+
+    .hero_section .text h1 {
+        font-size: 32px;
+    }
+
+    .hero_section .text {
+        display: flex;
+        font-size: 16px;
+    }
+
+    .hero_section .text button {
+        font-size: 12px;
+
     }
 }
 
@@ -1947,11 +2039,11 @@ footer a {
         font-size: 20px;
     }
 
-    .gallery_title h1{
+    .gallery_title h1 {
         font-size: 20px;
     }
-    
-    .gallery_title p{
+
+    .gallery_title p {
         font-size: 14px;
     }
 
@@ -2072,20 +2164,20 @@ footer a {
         letter-spacing: 2px;
     }
 
-    .contact_us{
+    .contact_us {
         display: none;
     }
 
-    .contact_us2{
+    .contact_us2 {
         display: flex;
         flex-direction: column;
     }
 
-    .contact_us2 h1{
+    .contact_us2 h1 {
         font-size: 16px;
     }
 
-    .contact_us2 p{
+    .contact_us2 p {
         font-size: 10px;
     }
 
@@ -2113,11 +2205,25 @@ footer a {
         z-index: 999;
     }
 
+    .hero_section .text h1 {
+        font-size: 28px;
+    }
+
+    .hero_section .text {
+        font-size: 14px;
+    }
+
+    .hero_section .text button {
+        font-size: 12px;
+
+    }
+
+
 
 
 }
 
-@media screen and (max-width: 442px){
+@media screen and (max-width: 442px) {
     .img_kanan img {
         width: 180px;
         height: 160px;
@@ -2128,7 +2234,7 @@ footer a {
         height: 200px;
     }
 
-    .map{
+    .map {
         width: 350px;
         height: 280px;
     }
@@ -2139,21 +2245,56 @@ footer a {
         background-color: whitesmoke;
     }
 
-    .hero_section .text {
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+
+    .slider_content img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .text_content {
+        font-size: 10px;
+        width: 300px;
+        height: 40vh;
+    }
+
+    .text_content button {
+        margin: 0 60px;
+        font-size: 10px;
+    }
+
+    .hero_section .text h1 {
         font-size: 24px;
-        color: white;
-        font-family: var(--font_family3--);
+    }
+
+    .hero_section .text {
+        font-size: 12px;
+    }
+
+    .hero_section .text button {
+        font-size: 12px;
+
+    }
+
+    .form_review {
+        min-width: 300px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .form_review h2{
+        font-size: 20px;
+    }
+
+    .text_review h3 {
+        font-size: 14px;
     }
     
+    .text_review p {
+        font-size: 12px;
+    }
+
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
     .img_kanan img {
         width: 150px;
         height: 120px;
@@ -2164,8 +2305,35 @@ footer a {
         height: 180px;
     }
 
-    .map{
+    .map {
         width: 320px;
         height: 280px;
     }
+
+    .about_text p {
+        font-size: 12px;
+    }
+
+    .about_text button {
+        font-size: 12px;
+    }
+
+    .move_text h1 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .move_text span {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .hero_section .sosmed_icon {
+        flex-direction: column;
+        top: 72vh;
+        left: 2vh;
+        font-size: 16px;
+        gap: 4px;
+    }
+
 }
